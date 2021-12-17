@@ -23,6 +23,7 @@ func dataSource() *schema.Resource {
 				Type:        schema.TypeString,
 				DefaultFunc: schema.EnvDefaultFunc("CANVAS_AUTH_TOKEN", ""),
 				Required:    true,
+				Sensitive:   true,
 			},
 
 			"course_codes": {
